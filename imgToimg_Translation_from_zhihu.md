@@ -22,7 +22,6 @@ $$
 \theta^{*}=\arg \max _{\theta} \int_{x} P_{\text {data }}(x) \log P_{G}\left(x^{i} ; \theta\right) d x-\int_{x} P_{\text {data }}(x) \log P_{\text {data }}(x) d x \\
 =\arg \min _{\theta} K L\left(P_{\text {data }}(x) \| P_{G}\left(x^{i} ; \theta\right)\right)
 \end{array}
-
 $$
 
 KL散度衡量两个分布，越小就越逼近，GAN中的discriminator要做的就是计算生成分布与真实分布的与KL divergence相关的一个散度。
@@ -35,21 +34,18 @@ GAN提出的目的就是为了找出一种新的衡量distribution差异的方�
 
 $$
 G^{*}=\arg \min _{G} \max _{D} V(G, D) 
-
 $$
 
 其中， V(G, D) 称为value function(价值函数) 
 
 $$
 V(G, D)=\mathbb{E}_{x \sim P_{\text {data }}}[\log D(x)]+\mathbb{E}_{x \sim P_{G}}[\log (1-D(x))]
-
 $$
 
 给定G，最好的D为
 
 $$
 D^{*}=\frac{p_{\text {data }}(x)}{p_{\text {duta }}(x)+p_{G}(x)}
-
 $$
 
 给定不同的G可以算出不同的D，将D带回后
@@ -64,7 +60,6 @@ V(G, D)=E_{x \sim P_{\text {data }}}[\log D(x)]+E_{x \sim P_{G}}[\log (1-D(x))] 
 =-2 \log 2+K L\left(P_{\text {data }}(x) \| \frac{P_{\text {data }}(x)+P_{G}(x)}{2}\right)+K L\left(P_{G}(x) \| \frac{P_{\text {data }}(x)+P_{G}(x)}{2}\right) \\
 =-2 \log 2+2 J S D\left(P_{\text {data }}(x) \| P_{G}(x)\right)\\
 \end{array}
-
 $$
 
 问题转化为
