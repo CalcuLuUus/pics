@@ -11,7 +11,7 @@ $P_{data}(x)$描述图像，${x_1, x_2, ..., x_m}$为sample，在$P_{data}$未�
 $$
 \begin{array}{l}
 \theta^{*}=\arg \max _{\theta} \prod_{i=1}^{m} P_{G}\left(x^{i} ; \theta\right)=\arg \max _{\theta} \sum_{i=1}^{m} \log \left\[P_{G}\left(x^{i} ; \theta\right)\right\] \\
-\approx \arg \max _{\theta} \mathbb{E}_{x \sim P_{\text {data }}} \log \left[P_{G}\left(x^{i} ; \theta\right)\right]
+\approx \arg \max _{\theta} \mathbb{E}_{x \sim P_{\text {data }}} \log \left\[P_{G}\left(x^{i} ; \theta\right)\right\]
 \end{array}
 
 $$
